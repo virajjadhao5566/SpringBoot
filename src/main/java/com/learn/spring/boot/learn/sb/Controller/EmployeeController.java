@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/employees")
+@RequestMapping("/employees/v1")
 public class EmployeeController {
 //    autowired is used for dependency injection
     @Autowired

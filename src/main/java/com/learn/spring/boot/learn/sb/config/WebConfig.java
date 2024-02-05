@@ -6,6 +6,9 @@ import org.springframework.web.servlet.config.annotation.ContentNegotiationConfi
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+
+//Added configuration so that client can get the content on basis of there need
+//Can get content in XML and jSON format by adding a parameter
 @Configuration
 @EnableWebMvc
 public class WebConfig implements WebMvcConfigurer {

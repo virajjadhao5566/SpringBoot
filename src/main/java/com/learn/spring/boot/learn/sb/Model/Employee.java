@@ -1,5 +1,9 @@
 package com.learn.spring.boot.learn.sb.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+//@JsonIgnoreProperties({"id"})
+//To ignore the specific properties in the response
 public class Employee {
     private String id;
     private String firstName;
