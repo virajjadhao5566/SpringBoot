@@ -41,5 +41,14 @@ public class EmployeeServiceImpl implements EmployeeService{
                         "Employee not found with Id :"+id));
     }
 
+    @Override
+    public String deleteEmployeeById(String id) {
+        Employee employee = employeeList.stream()
+                .filter(e->e.getId().equalsIgnoreCase(id))
+                .findFirst().get();
+        employeeList.remove(employee);
+        return "Employee with id : " + id + "deleted successfulyy";
+    }
+
 
 }
