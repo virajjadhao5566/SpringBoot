@@ -18,14 +18,16 @@ public class HomeController {
 //    Function to return a user
     public User getUser(){
         User user = new User();
-        user.setId(1);
+        user.setId("1");
         user.setName("Viraj");
         user.setEmail("virajjadhao85@gmail.com");
         return user;
     }
-//    PathVariables : To fetch variables from URL
+//    PathVariables : To fetch variables from URL and its compulsory field
     @GetMapping("/{name}")
     public String pathVariables(@PathVariable String name){
         return "Hello my name is " + name;
     }
+
+//    RequestParameters : Non compulsory to fetch value from variables
 }
