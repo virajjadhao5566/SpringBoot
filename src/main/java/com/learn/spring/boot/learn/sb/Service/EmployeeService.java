@@ -2,6 +2,12 @@ package com.learn.spring.boot.learn.sb.Service;
 
 import com.learn.spring.boot.learn.sb.Model.Employee;
 
+import java.util.List;
+
 public interface EmployeeService {
     public Employee save(Employee employee);
+
+    List<Employee> getEmployeeList();
+
+    Employee getEmployeeById(String id);
 }

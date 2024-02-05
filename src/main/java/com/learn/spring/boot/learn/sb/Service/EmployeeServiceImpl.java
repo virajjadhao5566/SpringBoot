@@ -1,6 +1,7 @@
 package com.learn.spring.boot.learn.sb.Service;
 
 import com.learn.spring.boot.learn.sb.Model.Employee;
+import com.learn.spring.boot.learn.sb.error.EmployeeNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -20,4 +21,25 @@ public class EmployeeServiceImpl implements EmployeeService{
         employeeList.add(employee);
         return employee;
     }
+
+    @Override
+    public List<Employee> getEmployeeList() {
+        return employeeList;
+    }
+
+    @Override
+    public Employee getEmployeeById(String id) {
+//        int n = employeeList.size();
+//        for(int i = 0;i<n;i++){
+//            if(id.equals(employeeList.get(i).getId())) return employeeList.get(i);
+//        }
+//        return null;
+        return employeeList.stream()
+                .filter(employee -> employee.getId().equalsIgnoreCase(id))
+                .findFirst()
+                .orElseThrow(()->new EmployeeNotFoundException("" +
+                        "Employee not found with Id :"+id));
+    }
+
+
 }
