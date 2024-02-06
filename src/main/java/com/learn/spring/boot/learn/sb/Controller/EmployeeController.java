@@ -2,15 +2,19 @@ package com.learn.spring.boot.learn.sb.Controller;
 
 import com.learn.spring.boot.learn.sb.Model.Employee;
 import com.learn.spring.boot.learn.sb.Service.EmployeeService;
+import com.learn.spring.boot.learn.sb.entity.EmployeeEntity;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/employees/v1")
+@RequestMapping("/v1/employees")
 public class EmployeeController {
 //    autowired is used for dependency injection
+//    Qualifier is added to add the multiple version and add the version we want with current one
+    @Qualifier("employeeServiceImpl")
     @Autowired
     private EmployeeService employeeService;
 //    as employee will a entered as a json body format

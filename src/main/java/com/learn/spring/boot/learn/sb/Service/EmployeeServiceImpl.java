@@ -1,6 +1,7 @@
 package com.learn.spring.boot.learn.sb.Service;
 
 import com.learn.spring.boot.learn.sb.Model.Employee;
+import com.learn.spring.boot.learn.sb.entity.EmployeeEntity;
 import com.learn.spring.boot.learn.sb.error.EmployeeNotFoundException;
 import org.springframework.stereotype.Service;
 
