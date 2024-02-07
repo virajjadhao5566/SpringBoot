@@ -5,6 +5,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
+//To give tablename to the table
 @Table(name = "tbl_employee")
 public class EmployeeEntity {
     @Id
